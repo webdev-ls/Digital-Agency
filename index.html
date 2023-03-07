@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Hello, world!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'poppins';
+            font-style: normal;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar-brand {
+
+            font-weight: 700;
+            font-size: 29px;
+            line-height: 44px;
+            color: #1090CB;
+        }
+
+        .nav-link {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #000;
+        }
+
+        .nav-link:hover {
+            color: #1090CB !important;
+        }
+
+        .nav-active {
+            color: #1090CB;
+        }
+
+        .btn {
+            width: 160px;
+            height: 45px;
+        }
+
+        .btn-1 {
+            font-size: 13px;
+            line-height: 20px;
+            color: #FFFFFF;
+            background: #1090CB;
+            border-radius: 6px;
+        }
+
+        .btn-2 {
+            font-size: 13px;
+            line-height: 20px;
+            color: #1090CB;
+            background: #ffffff;
+            border-radius: 6px;
+            border: 1px solid #1090CB;
+        }
+
+        .hero {
+            background: rgba(16, 144, 203, 0.1);
+            padding: 39px 0;
+            background-image: url(assets/Vector\ 1.svg), url(assets/Vector\ 2.svg);
+            background-repeat: no-repeat;
+            background-position: bottom -80px right 0, bottom -107px left 0px;
+        }
+
+        .hero h2 {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 60px;
+            color: #000000;
+        }
+
+        .hero h2 span {
+            color: #1090CB;
+        }
+
+        .hero p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 204.3%;
+            color: #5C5C5C;
+        }
+
+        .hero img {
+            height: 450px;
+        }
+
+        .feature {
+            width: 310px;
+            height: 90px;
+            gap: 20px;
+            justify-content: flex-start;
+        }
+
+        .feature .left {
+            width: 75px;
+            height: 75px;
+            background: #EFEAFF;
+            border-radius: 20px;
+        }
+
+        .border {
+            height: 1px;
+            background-color: #f2f2f2;
+        }
+
+        .f-content h4 {
+            font-weight: 600;
+            font-size: 33px;
+            text-align: center;
+            color: #252525;
+            margin-bottom: 20px;
+        }
+
+        .f-content p {
+            padding: 0 20%;
+        }
+
+        .feature2 {
+            padding: 20px 60px;
+            margin-top: 50px;
+            gap: 110px;
+        }
+
+        .feature2 .f2-left {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .feature2 .top {
+            justify-content: flex-start;
+            gap: 15px;
+        }
+
+        .feature2 .top p {
+            margin-bottom: 0;
+        }
+
+        .feature2 .top .left {
+            background: #08D3BB;
+            border-radius: 50%;
+            padding: 15px;
+        }
+
+        .feature2 .right p {
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 175%;
+            color: #000000;
+        }
+
+        .feature2 .right span {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 175%;
+            color: #868686;
+        }
+
+        .feature2 .middle h2 {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 170%;
+            color: #1090CB;
+            color: #252525;
+            ;
+        }
+
+        .feature2 .middle h2 span {
+            color: #1090CB;
+        }
+
+        .feature2 .bottom p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 170%;
+            color: #545454;
+        }
+
+        .feature2 .f2-right img {
+            width: 100%;
+        }
+
+        .cards {
+            justify-content: space-between;
+        }
+
+        .card {
+            width: 475px;
+            height: 410px;
+            background: #F4F4F4;
+            border-radius: 20px;
+            padding: 20px 50px;
+            justify-content: space-evenly;
+        }
+
+        .card2 {
+            background: #1090CB;
+        }
+
+        .card h4 {
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 170%;
+            text-align: center;
+            color: #252525;
+        }
+
+        .card p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 170%;
+            text-align: center;
+            color: #545454;
+        }
+
+        .clients h5 {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 159%;
+            color: #000000;
+            margin-top: 20px;
+        }
+
+        .company-cards {
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .company-cards img {
+            height: 75px;
+            width: 190px;
+        }
+
+        .newsletter {
+            position: relative;
+            background: #E8F4FA;
+            padding: 100px 0;
+        }
+
+        .newsletter input::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 170%;
+            color: #787878;
+        }
+
+        .btn-3 {
+            background: #000000;
+            border-radius: 10px;
+            padding: 20px 10px;
+            color: #fff;
+        }
+
+        .btn-3:hover {
+            background: #fff;
+            color: #000;
+            border: 1px solid #000;
+        }
+
+        .subscribe {
+            position: relative;
+        }
+
+        .n-icon {
+            position: absolute;
+            top: -55px;
+            right: 120px;
+        }
+
+        .star {
+            height: 86px;
+            width: 112px;
+            position: absolute;
+            top: -45px;
+            left: 60px;
+        }
+
+        .f-links {
+            justify-content: space-around;
+            padding: 0 15px;
+            list-style-type: none;
+        }
+
+        ul {
+            list-style-type: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 186.3%;
+            color: #515151;
+        }
+
+        ul .title {
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 26px;
+            color: #000000;
+        }
+
+        .socials {
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        .social-icons {
+            gap: 40px;
+            font-size: 20px;
+        }
+        .social-icons i{
+            background: #f2f2f2;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar sticky-top px-5 py-3 bg-white shadow">
+        <div class="navbar-brand">
+            <span>LOGO</span>
+        </div>
+        <div class="links flex pull-right gap-5">
+            <div class="nav-item">
+                <a href="" class="nav-active nav-link">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="" class="nav-link">About us</a>
+            </div>
+            <div class="nav-item">
+                <a href="" class="nav-link">Services</a>
+            </div>
+            <div class="nav-item">
+                <a href="" class="nav-link">Blog</a>
+            </div>
+            <div class="nav-btn">
+                <button class="btn btn-1">Contact us</button>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <section class="hero row px-5">
+            <div class="col-sm-6 flex flex-column align-items-start">
+                <h2>Experienced <span>mobile and web applications</span> and website builders measuring.</h2>
+                <p>KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and web applications and website builders
+                    measuring dozens of completed projects. We build and develop mobile applications for several top
+                    platforms, including Android & IOS. </p>
+                <div class="btns flex gap-4">
+                    <button class="btn btn-1">Contact us</button>
+                    <button class="btn btn-2">View More</button>
+                </div>
+            </div>
+            <div class="col-sm-6 flex">
+                <img src="assets/hero-img.png" alt="" srcset="">
+            </div>
+        </section>
+        <section class="row features flex py-5 gap-4">
+            <div class="feature flex">
+                <div class="left flex">
+                    <img src="assets/f-1.svg" alt="">
+                </div>
+                <div class="right">
+                    <h5>Web Application</h5>
+                    <span>Lorem ipsum dolor sit.</span>
+                </div>
+            </div>
+            <div class="feature flex">
+                <div class="left flex">
+                    <img src="assets/f-2.svg" alt="">
+                </div>
+                <div class="right">
+                    <h5>Seo</h5>
+                    <span>Lorem ipsum dolor sit.</span>
+                </div>
+            </div>
+            <div class="feature flex">
+                <div class="left flex">
+                    <img src="assets/f-3.svg" alt="">
+                </div>
+                <div class="right">
+                    <h5>AR/VR Solutions</h5>
+                    <span>Lorem ipsum dolor sit.</span>
+                </div>
+            </div>
+            <div class="feature flex">
+                <div class="left flex">
+                    <img src="assets/f-4.svg" alt="">
+                </div>
+                <div class="right">
+                    <h5>Mobile Applications</h5>
+                    <span>Lorem ipsum dolor sit.</span>
+                </div>
+            </div>
+        </section>
+        <div class="border"></div>
+        <section class="row flex f-content">
+            <div class="col-sm-8 text-center py-5">
+                <h4>Lorem Ipsum is simply dummy text of the printing. </h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    the industry's</p>
+            </div>
+        </section>
+        <section class="feature2 row">
+            <div class="row">
+                <div class="col-md-6 f2-left">
+                    <div class="top flex">
+                        <div class="left flex">
+                            <img src="assets/smile.svg" alt="" class="icon">
+                        </div>
+                        <div class="right">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <span>Lorem ipsum dolor sit amet consectetur.</span>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <h2><span>Lorem Ipsum </span> is simply dummy text of the printing. </h2>
+                    </div>
+                    <div class="bottom">
+                        <p>
+                            KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and web applications and website
+                            builders measuring dozens of completed projects. We build and develop mobile applications
+                            for
+                            several top platforms, including Android & IOS.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 f2-right">
+                    <img src="assets/f-mobile.png" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="order-1 col-md-6 f2-left">
+                    <div class="top flex">
+                        <div class="left flex">
+                            <img src="assets/smile.svg" alt="" class="icon">
+                        </div>
+                        <div class="right">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <span>Lorem ipsum dolor sit amet consectetur.</span>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <h2><span>Lorem Ipsum </span> is simply dummy text of the printing. </h2>
+                    </div>
+                    <div class="bottom">
+                        <p>
+                            KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and web applications and website
+                            builders measuring dozens of completed projects. We build and develop mobile applications
+                            for
+                            several top platforms, including Android & IOS.
+                        </p>
+                    </div>
+                </div>
+                <div class="order-0 col-md-6 f2-right">
+                    <img src="assets/f-mobile.png" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 f2-left">
+                    <div class="top flex">
+                        <div class="left flex">
+                            <img src="assets/smile.svg" alt="" class="icon">
+                        </div>
+                        <div class="right">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <span>Lorem ipsum dolor sit amet consectetur.</span>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <h2><span>Lorem Ipsum </span> is simply dummy text of the printing. </h2>
+                    </div>
+                    <div class="bottom">
+                        <p>
+                            KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and web applications and website
+                            builders measuring dozens of completed projects. We build and develop mobile applications
+                            for
+                            several top platforms, including Android & IOS.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 f2-right">
+                    <img src="assets/f-mobile.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section card-section row flex mt-5 px-1">
+            <div class="col-sm-10 cards flex gap-5 flex-wrap">
+                <div class="card border-0 flex text-center">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, delectus sunt quod minus quis
+                        minima facilis veniam tempore tempora repellat aspernatur expedita unde consequatur porro, iste
+                        reiciendis ipsum explicabo repudiandae at quaerat asperiores vitae id totam? Totam velit iusto
+                        numquam.</p>
+                    <button class="btn btn-1">View More</button>
+                </div>
+                <div class="card card2 border-0 flex text-center">
+                    <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, delectus
+                        sunt quod minus quis
+                        minima facilis veniam tempore tempora repellat aspernatur expedita unde consequatur porro, iste
+                        reiciendis ipsum explicabo repudiandae at quaerat asperiores vitae id totam? Totam velit iusto
+                        numquam.</p>
+                    <button class="btn btn-2">View More</button>
+                </div>
+            </div>
+        </section>
+        <section class="clients row flex px-4 mt-5">
+            <h5 class="text-center">You Will be in Good company</h5>
+            <div class="company-cards flex">
+                <img src="assets/c-card1.png" alt="">
+                <img src="assets/c-card2.png" alt="">
+                <img src="assets/c-card3.png" alt="">
+                <img src="assets/c-card4.png" alt="">
+            </div>
+        </section>
+        <section class="row flex newsletter my-5">
+            <img class="star" src="assets/Star.png" alt="">
+            <div class="subscribe flex flex-column gap-4 w-50">
+                <img class="n-icon" src="assets/n-icon.png" alt="">
+                <h5>Lorem ipsum dolor sit amet.</h5>
+                <div class="input-group flex gap-4">
+                    <input class="form-control" type="email" name="" id="" placeholder="Enter Your Email">
+                    <button class="btn btn-3 flex">Subscribe</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="row g-0 px-5 mb-3 mt-4">
+            <div class="col-4">
+                <div class="navbar-brand">
+                    <span>LOGO</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <span>&copy lorem</span>
+            </div>
+            <div class="col-4 flex f-links">
+                <ul>
+                    <li class="title">About us</li>
+                    <li>About us</li>
+                    <li>About us</li>
+                    <li>About us</li>
+                    <li>About us</li>
+                </ul>
+                <ul>
+                    <li class="title">About us</li>
+                    <li>About us</li>
+                    <li>About us</li>
+                    <li>About us</li>
+                    <li>About us</li>
+                </ul>
+            </div>
+            <div class="col-4 flex socials">
+                <div class="social-icons flex">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-facebook"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
